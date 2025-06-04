@@ -1,2 +1,2 @@
 # PAWFECT
-A service for helping dogs in need !
+A service for helping animals in need !
