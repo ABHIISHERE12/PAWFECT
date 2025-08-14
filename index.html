@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawfect - All About Dogs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 font-sans">
+
+  <!-- Header -->
+  <header class="bg-yellow-200 p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center text-gray-800">🐾 Pawfect: All About Dogs</h1>
+    <p class="text-center text-gray-600 mt-2">Your daily dose of dog facts and cuteness!</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-10 px-4">
+    <img src="https://images.unsplash.com/photo-1601758003122-58e9e0e9a29c?auto=format&fit=crop&w=600&q=60" 
+         alt="Cute dog" 
+         class="mx-auto rounded-2xl shadow-md w-60 h-60 object-cover mb-4" />
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Why Dogs Are the Best</h2>
+    <p class="max-w-xl mx-auto text-gray-600">Dogs are loyal, loving, and always ready to make your day better. Whether you want a cuddle buddy or a walking partner, dogs have it all.</p>
+  </section>
+
+  <!-- Fun Facts -->
+  <section class="bg-white py-8 px-4">
+    <h3 class="text-xl font-bold text-center text-gray-700 mb-6">🐶 Fun Dog Facts</h3>
+    <div class="flex justify-center">
+      <button onclick="showFact()" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
+        Show a Dog Fact
+      </button>
+    </div>
+    <p id="dog-fact" class="text-center mt-6 text-lg text-gray-700"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-200 text-center py-4 mt-10 text-gray-700">
+    Made with ❤️ by Abhigyan | © 2025 Pawfect
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const facts = [
+      "Dogs have about 1,700 taste buds. (Humans have 9,000!)",
+      "A dog’s sense of smell is 40 times better than humans.",
+      "Dalmatian puppies are born completely white.",
+      "Dogs dream just like humans do.",
+      "The Basenji is the only dog that doesn’t bark."
+    ];
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('dog-fact').innerText = fact;
+    }
+  </script>
+
+</body>
+</html>
